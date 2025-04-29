@@ -1,0 +1,4 @@
+# Nmap 7.95 scan initiated Sun Apr 27 12:53:19 2025 as: /usr/lib/nmap/nmap -Pn -sS -sV -O -sC -p- --min-rate 1000 -oA web_server 10.200.89.13
+Host: 10.200.89.13 (web.thereserve.loc)	Status: Up
+Host: 10.200.89.13 (web.thereserve.loc)	Ports: 22/open/tcp//ssh//OpenSSH 7.6p1 Ubuntu 4ubuntu0.7 (Ubuntu Linux; protocol 2.0)/, 80/open/tcp//http//Apache httpd 2.4.29 ((Ubuntu))/	Ignored State: closed (65533)	OS: Linux 4.15	Seq Index: 263	IP ID Seq: All zeros
+# Nmap done at Sun Apr 27 12:55:12 2025 -- 1 IP address (1 host up) scanned in 113.63 seconds

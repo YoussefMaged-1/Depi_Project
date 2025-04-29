@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.95 scan initiated Sun Apr 27 15:20:01 2025 as: /usr/lib/nmap/nmap -Pn -sS -sV -O -sC -p- -&#45;min-rate 1000 -oA vpn_server 10.200.89.12 -->
+<nmaprun scanner="nmap" args="/usr/lib/nmap/nmap -Pn -sS -sV -O -sC -p- -&#45;min-rate 1000 -oA vpn_server 10.200.89.12" start="1745781601" startstr="Sun Apr 27 15:20:01 2025" version="7.95" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<taskprogress task="SYN Stealth Scan" time="1745781653" percent="66.46" remaining="27" etc="1745781679"/>
+<host starttime="1745781601" endtime="1745781741"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.200.89.12" addrtype="ipv4"/>
+<hostnames>
+<hostname name="vpn.thereserve.loc" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="65532">
+<extrareasons reason="reset" count="65532" proto="tcp" ports="1-21,23-79,81-1193,1195-65535"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="7.6p1 Ubuntu 4ubuntu0.5" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.6p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 8d:a8:20:75:77:ec:37:7d:8c:a6:4f:03:d1:8c:a1:43 (RSA)&#xa;  256 d3:d3:37:9f:02:d5:70:b1:19:99:d8:1f:28:fd:66:d8 (ECDSA)&#xa;  256 5f:e9:c3:bf:59:8f:8c:6a:31:ca:07:1d:6c:9f:eb:2b (ED25519)"><table>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQCiJdPztFxSMJW68yGofxDRcfGpNuh9h133bvyLYVBZOwmNmuLrcE+RqKeQGQOdFeJiZFyz5BmEa2RAJ9YoV+xhTlF5k8BnYWLUHDxVfWQjBM8ZzDNcZoPAbq1C4zTO9rUSlmpnU7UT7wyrrCxeG497RxYtOqxjK2d+wbrBfo+oXqU4v7jJdLAGiKt5uOxl1b1cQXlYgs3ghpKzE4Zz6o4yXtA77FPYUpMi22H9ZJjZ5lRm8n5y8poKYzoCH2CD6qmKalu/Xh08ti9WLLyteeRGG3z6Ej+G7AwJmLSCw76TDPeIpPmKoxsSu/owpLdBwa+xArF/hwct2pxg6ZKPdbsr</elem>
+<elem key="bits">2048</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="fingerprint">8da8207577ec377d8ca64f03d18ca143</elem>
+</table>
+<table>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBPaJ+K0PzRfR4YL6QiBW8v6GTgrkpiLboRYMTQJgad0wyDlOf/CKW7o+6YuMHV+XzsUW3lHj2G8iGaQigobPYQY=</elem>
+<elem key="bits">256</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="fingerprint">d3d3379f02d570b11999d81f28fd66d8</elem>
+</table>
+<table>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIOIhR2EA3nf3xlDlQUbZaR3NLs2N2Cgn1lVbqkmBbAgN</elem>
+<elem key="bits">256</elem>
+<elem key="type">ssh-ed25519</elem>
+<elem key="fingerprint">5fe9c3bf598f8c6a31ca071d6c9feb2b</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.4.29" extrainfo="(Ubuntu)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.29</cpe></service><script id="http-title" output="VPN Request Portal"><elem key="title">VPN Request Portal</elem>
+</script><script id="http-server-header" output="Apache/2.4.29 (Ubuntu)"><elem>Apache/2.4.29 (Ubuntu)</elem>
+</script></port>
+<port protocol="tcp" portid="1194"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="openvpn" method="table" conf="3"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="43646"/>
+<osmatch name="Linux 4.15" accuracy="100" line="70405">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:4.15</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="1315722" lastboot="Sat Apr 12 09:53:39 2025"/>
+<distance value="2"/>
+<tcpsequence index="262" difficulty="Good luck!" values="2CFC3B0C,9C9F013B,79A2A923,64BC6A5B,F54DF891,40950649"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="4E6C2EB4,4E6C2FAC,4E6C2FAC,4E6C3005,4E6C305F,4E6C30B8"/>
+<times srtt="192317" rttvar="39636" to="350861"/>
+</host>
+<runstats><finished time="1745781742" timestr="Sun Apr 27 15:22:22 2025" summary="Nmap done at Sun Apr 27 15:22:22 2025; 1 IP address (1 host up) scanned in 141.06 seconds" elapsed="141.06" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

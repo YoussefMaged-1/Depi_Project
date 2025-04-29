@@ -1,0 +1,4 @@
+# Nmap 7.95 scan initiated Sun Apr 27 15:20:01 2025 as: /usr/lib/nmap/nmap -Pn -sS -sV -O -sC -p- --min-rate 1000 -oA vpn_server 10.200.89.12
+Host: 10.200.89.12 (vpn.thereserve.loc)	Status: Up
+Host: 10.200.89.12 (vpn.thereserve.loc)	Ports: 22/open/tcp//ssh//OpenSSH 7.6p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.0)/, 80/open/tcp//http//Apache httpd 2.4.29 ((Ubuntu))/, 1194/open/tcp//openvpn?///	Ignored State: closed (65532)	OS: Linux 4.15	Seq Index: 262	IP ID Seq: All zeros
+# Nmap done at Sun Apr 27 15:22:22 2025 -- 1 IP address (1 host up) scanned in 141.06 seconds

@@ -1,0 +1,22 @@
+# Nmap 7.95 scan initiated Sun Apr 27 12:53:19 2025 as: /usr/lib/nmap/nmap -Pn -sS -sV -O -sC -p- --min-rate 1000 -oA web_server 10.200.89.13
+Nmap scan report for web.thereserve.loc (10.200.89.13)
+Host is up (0.21s latency).
+Not shown: 65533 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 7.6p1 Ubuntu 4ubuntu0.7 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 b4:e1:e3:31:24:37:8d:47:80:24:51:34:ec:06:de:e3 (RSA)
+|   256 39:0d:f4:4f:d5:36:0b:c2:8b:a4:da:72:55:61:b2:22 (ECDSA)
+|_  256 30:35:75:30:4e:c1:69:47:6e:0c:93:f9:33:e8:41:bc (ED25519)
+80/tcp open  http    Apache httpd 2.4.29 ((Ubuntu))
+|_http-title: Site doesn't have a title (text/html).
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+Device type: general purpose
+Running: Linux 4.X
+OS CPE: cpe:/o:linux:linux_kernel:4.15
+OS details: Linux 4.15
+Network Distance: 2 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Apr 27 12:55:12 2025 -- 1 IP address (1 host up) scanned in 113.63 seconds

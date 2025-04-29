@@ -1,0 +1,23 @@
+# Nmap 7.95 scan initiated Sun Apr 27 15:20:01 2025 as: /usr/lib/nmap/nmap -Pn -sS -sV -O -sC -p- --min-rate 1000 -oA vpn_server 10.200.89.12
+Nmap scan report for vpn.thereserve.loc (10.200.89.12)
+Host is up (0.19s latency).
+Not shown: 65532 closed tcp ports (reset)
+PORT     STATE SERVICE  VERSION
+22/tcp   open  ssh      OpenSSH 7.6p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 8d:a8:20:75:77:ec:37:7d:8c:a6:4f:03:d1:8c:a1:43 (RSA)
+|   256 d3:d3:37:9f:02:d5:70:b1:19:99:d8:1f:28:fd:66:d8 (ECDSA)
+|_  256 5f:e9:c3:bf:59:8f:8c:6a:31:ca:07:1d:6c:9f:eb:2b (ED25519)
+80/tcp   open  http     Apache httpd 2.4.29 ((Ubuntu))
+|_http-title: VPN Request Portal
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+1194/tcp open  openvpn?
+Device type: general purpose
+Running: Linux 4.X
+OS CPE: cpe:/o:linux:linux_kernel:4.15
+OS details: Linux 4.15
+Network Distance: 2 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Apr 27 15:22:22 2025 -- 1 IP address (1 host up) scanned in 141.06 seconds

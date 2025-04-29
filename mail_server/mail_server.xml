@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.95 scan initiated Sun Apr 27 13:18:41 2025 as: /usr/lib/nmap/nmap -Pn -sS -sV -O -sC -p- -&#45;min-rate 1000 -oA mail_server 10.200.89.11 -->
+<nmaprun scanner="nmap" args="/usr/lib/nmap/nmap -Pn -sS -sV -O -sC -p- -&#45;min-rate 1000 -oA mail_server 10.200.89.11" start="1745774321" startstr="Sun Apr 27 13:18:41 2025" version="7.95" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<taskprogress task="SYN Stealth Scan" time="1745774377" percent="70.26" remaining="24" etc="1745774401"/>
+<host starttime="1745774321" endtime="1745774504"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.200.89.11" addrtype="ipv4"/>
+<hostnames>
+<hostname name="mail.thereserve.loc" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="65513">
+<extrareasons reason="reset" count="65513" proto="tcp" ports="1-21,23-24,26-79,81-109,111-134,136-138,140-142,144-444,446-586,588-3305,3307-3388,3390-5984,5986-33059,33061-47000,47002-49663,49671-49680,49682-65535"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ssh" product="OpenSSH" version="for_Windows_7.7" extrainfo="protocol 2.0" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:for_windows_7.7</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 f3:6c:52:d2:7f:e9:0e:1c:c1:c7:ac:96:2c:d1:ec:2d (RSA)&#xa;  256 c2:56:3c:ed:c4:b0:69:a8:e7:ad:3c:31:05:05:e9:85 (ECDSA)&#xa;  256 d3:e5:f0:73:75:d5:20:d9:c0:bb:41:99:e7:af:a0:00 (ED25519)"><table>
+<elem key="bits">2048</elem>
+<elem key="fingerprint">f36c52d27fe90e1cc1c7ac962cd1ec2d</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQCtrh5q/mHtQgBN5dnJNnoa5ML8Mx5USvALNXVVdzhTt/i4egyOxcihDsTw5W4597n+W7O+vgKDZTgIUzorSv0iviBHHdBUp8ots6cXdJgmRkLadgwSRVLfHm1W3+03hlL7jIIxC5Me69cq10ZLqxSAGy0QEn5OS6NqTxNoge1saLJoexSgTfh+XGH0FDHpGrZfkpsvep6DHF3uxtXMw0ZuFoZJj9s30XRP2YhRtZznXj9Npu/HQ3ARC5y5jNrBs8uzycPl709HgQpOpzHOIZQrMuX5vlVyeeYnVgHnzeBdePzLAxLuB+Pq3w1nJ/44mDmR/mtmvnNXVh/tPok3wuOh</elem>
+<elem key="type">ssh-rsa</elem>
+</table>
+<table>
+<elem key="bits">256</elem>
+<elem key="fingerprint">c2563cedc4b069a8e7ad3c310505e985</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBBJsQkkE7Y2w6WvH32ED3dOgPle8H/lMDjTLJpH7+qneyCMBSUEUGR15fJYq7+B3dv3drI8tj5b7EAsnS3tQuNw=</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+</table>
+<table>
+<elem key="bits">256</elem>
+<elem key="fingerprint">d3e5f07375d520d9c0bb4199e7afa000</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIB8+p9mAQHSqeNvd97YzDOGR4BYy5LhtNRah3Qw8WTrw</elem>
+<elem key="type">ssh-ed25519</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="25"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="smtp" product="hMailServer smtpd" hostname="MAIL" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="smtp-commands" output="MAIL, SIZE 20480000, AUTH LOGIN, HELP&#xa; 211 DATA HELO EHLO MAIL NOOP QUIT RCPT RSET SAML TURN VRFY"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft IIS httpd" version="10.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:internet_information_services:10.0</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-methods" output="&#xa;  Potentially risky methods: TRACE"><table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-title" output="403 - Forbidden: Access is denied."><elem key="title">403 - Forbidden: Access is denied.</elem>
+</script><script id="http-server-header" output="Microsoft-IIS/10.0"><elem>Microsoft-IIS/10.0</elem>
+</script></port>
+<port protocol="tcp" portid="110"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="pop3" product="hMailServer pop3d" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="143"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="imap" product="hMailServer imapd" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="imap-capabilities" output="IMAP4 completed RIGHTS=texkA0001 IDLE CAPABILITY OK NAMESPACE SORT ACL IMAP4rev1 QUOTA CHILDREN"/></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="tcp" portid="587"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="smtp" product="hMailServer smtpd" hostname="MAIL" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="smtp-commands" output="MAIL, SIZE 20480000, AUTH LOGIN, HELP&#xa; 211 DATA HELO EHLO MAIL NOOP QUIT RCPT RSET SAML TURN VRFY"/></port>
+<port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="mysql" product="MySQL" version="8.0.31" method="probed" conf="10"><cpe>cpe:/a:mysql:mysql:8.0.31</cpe></service><script id="mysql-info" output="&#xa;  Protocol: 10&#xa;  Version: 8.0.31&#xa;  Thread ID: 52&#xa;  Capabilities flags: 65535&#xa;  Some Capabilities: LongPassword, IgnoreSigpipes, Support41Auth, IgnoreSpaceBeforeParenthesis, Speaks41ProtocolOld, SwitchToSSLAfterHandshake, SupportsCompression, InteractiveClient, SupportsTransactions, DontAllowDatabaseTableColumn, Speaks41ProtocolNew, LongColumnFlag, SupportsLoadDataLocal, ConnectWithDatabase, FoundRows, ODBCClient, SupportsMultipleResults, SupportsAuthPlugins, SupportsMultipleStatments&#xa;  Status: Autocommit&#xa;  Salt: ,OWH&apos;i\x0Ci\x0E\x05U\x02\x13?^:\x07s\x13O&#xa;  Auth Plugin Name: caching_sha2_password"><elem key="Protocol">10</elem>
+<elem key="Version">8.0.31</elem>
+<elem key="Thread ID">52</elem>
+<elem key="Capabilities flags">65535</elem>
+<table key="Some Capabilities">
+<elem>LongPassword</elem>
+<elem>IgnoreSigpipes</elem>
+<elem>Support41Auth</elem>
+<elem>IgnoreSpaceBeforeParenthesis</elem>
+<elem>Speaks41ProtocolOld</elem>
+<elem>SwitchToSSLAfterHandshake</elem>
+<elem>SupportsCompression</elem>
+<elem>InteractiveClient</elem>
+<elem>SupportsTransactions</elem>
+<elem>DontAllowDatabaseTableColumn</elem>
+<elem>Speaks41ProtocolNew</elem>
+<elem>LongColumnFlag</elem>
+<elem>SupportsLoadDataLocal</elem>
+<elem>ConnectWithDatabase</elem>
+<elem>FoundRows</elem>
+<elem>ODBCClient</elem>
+<elem>SupportsMultipleResults</elem>
+<elem>SupportsAuthPlugins</elem>
+<elem>SupportsMultipleStatments</elem>
+</table>
+<elem key="Status">Autocommit</elem>
+<elem key="Salt">,OWH&apos;i\x0Ci\x0E\x05U\x02\x13?^:\x07s\x13O</elem>
+<elem key="Auth Plugin Name">caching_sha2_password</elem>
+</script><script id="ssl-cert" output="Subject: commonName=MySQL_Server_8.0.31_Auto_Generated_Server_Certificate&#xa;Not valid before: 2023-01-10T07:46:11&#xa;Not valid after:  2033-01-07T07:46:11"><table key="subject">
+<elem key="commonName">MySQL_Server_8.0.31_Auto_Generated_Server_Certificate</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">MySQL_Server_8.0.31_Auto_Generated_CA_Certificate</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">ACDD322F9FCF46DABC28AA02135A6701677C243527A3317E9FE46727DC1793BB7FD77C48EA81FE25ABE141BEBDB37B0E78E9A459A63C99C63E3293A778B367FB8CC051118DAEC87C3120772E976C469C5C8E9B71A4EE24FAC242D0914716FBDE6F4D8F7632C8A73088A13D5E50B793438BD6DA399D38A415DF9CC0CA8843FC1E072DF0EF036D06940B0694A58F260D19A4A69938F5BADA7DA70D3673959343A069EB78A69CF4FDBD1384447747FB17FF0ADF17F3B3253E92DCA993C64B0926E8C6662F2D9501E6D9487F45051C059ECDE79BD55AD380D4FA89CDD2ECFFCAE86D1B33569C30312784BAF18CEEB059C2334DF388A48F65945DE5FA3DFFB5FE49F3</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="value">CA:FALSE</elem>
+<elem key="critical">true</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2023-01-10T07:46:11</elem>
+<elem key="notAfter">2033-01-07T07:46:11</elem>
+</table>
+<elem key="md5">1bd2ba34dd9d39a0fba25013eb1fb3f6</elem>
+<elem key="sha1">406bcedd04f3dd8e17842fd6cefda0d713824cdf</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDBzCCAe+gAwIBAgIBAjANBgkqhkiG9w0BAQsFADA8MTowOAYDVQQDDDFNeVNR&#xa;TF9TZXJ2ZXJfOC4wLjMxX0F1dG9fR2VuZXJhdGVkX0NBX0NlcnRpZmljYXRlMB4X&#xa;DTIzMDExMDA3NDYxMVoXDTMzMDEwNzA3NDYxMVowQDE+MDwGA1UEAww1TXlTUUxf&#xa;U2VydmVyXzguMC4zMV9BdXRvX0dlbmVyYXRlZF9TZXJ2ZXJfQ2VydGlmaWNhdGUw&#xa;ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCs3TIvn89G2rwoqgITWmcB&#xa;Z3wkNSejMX6f5Gcn3BeTu3/XfEjqgf4lq+FBvr2zew546aRZpjyZxj4yk6d4s2f7&#xa;jMBREY2uyHwxIHcul2xGnFyOm3Gk7iT6wkLQkUcW+95vTY92MsinMIihPV5Qt5ND&#xa;i9baOZ04pBXfnMDKiEP8Hgct8O8DbQaUCwaUpY8mDRmkppk49brafacNNnOVk0Og&#xa;aet4ppz0/b0ThER3R/sX/wrfF/OzJT6S3KmTxksJJujGZi8tlQHm2Uh/RQUcBZ7N&#xa;55vVWtOA1PqJzdLs/8robRszVpwwMSeEuvGM7rBZwjNN84ikj2WUXeX6Pf+1/knz&#xa;AgMBAAGjEDAOMAwGA1UdEwEB/wQCMAAwDQYJKoZIhvcNAQELBQADggEBAEmsYYZu&#xa;0zDGKXra6YVn0MpUHz1v9Se64F4XykpuyLK5WF7EIarhqDWL3M797NhA8ofQci0f&#xa;zkYvAJtBtyll4JYuRysbUA6SlSuDeiz4PbmFAyEqY6sszjGUG7RJK7cB64JNGVz+&#xa;hRKkCY5G9rBdz8kcCJKd+KwqcyTeVPJjydX8UOEai5dGy+gjMNrhgnjJHvm7SwE2&#xa;py1scKabTeLI4C4SrlhNsqcuV0M2Q0LRVHh1CClQEjC+enf7LRw8zE6DdxoXro27&#xa;au/kAzE0z2FLfMJiHUlIR86ktSdiBgoMuYBP4dt+IUDALk6FJe1ODB7Fh2KttJAQ&#xa;aXBwObun1tMJxDI=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+<port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ms-wbt-server" product="Microsoft Terminal Services" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="rdp-ntlm-info" output="&#xa;  Target_Name: THERESERVE&#xa;  NetBIOS_Domain_Name: THERESERVE&#xa;  NetBIOS_Computer_Name: MAIL&#xa;  DNS_Domain_Name: thereserve.loc&#xa;  DNS_Computer_Name: MAIL.thereserve.loc&#xa;  DNS_Tree_Name: thereserve.loc&#xa;  Product_Version: 10.0.17763&#xa;  System_Time: 2025-04-27T17:21:20+00:00"><elem key="Target_Name">THERESERVE</elem>
+<elem key="NetBIOS_Domain_Name">THERESERVE</elem>
+<elem key="NetBIOS_Computer_Name">MAIL</elem>
+<elem key="DNS_Domain_Name">thereserve.loc</elem>
+<elem key="DNS_Computer_Name">MAIL.thereserve.loc</elem>
+<elem key="DNS_Tree_Name">thereserve.loc</elem>
+<elem key="Product_Version">10.0.17763</elem>
+<elem key="System_Time">2025-04-27T17:21:20+00:00</elem>
+</script><script id="ssl-date" output="2025-04-27T17:21:31+00:00; 0s from scanner time."><elem key="delta">0.0</elem>
+<elem key="date">2025-04-27T17:21:31+00:00</elem>
+</script><script id="ssl-cert" output="Subject: commonName=MAIL.thereserve.loc&#xa;Not valid before: 2025-04-22T01:55:18&#xa;Not valid after:  2025-10-22T01:55:18"><table key="subject">
+<elem key="commonName">MAIL.thereserve.loc</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">MAIL.thereserve.loc</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">E41532D006896D329A9D2D11F99EE973F2A0CAC2C0396E9B3982B49CF271E9B7395CC7EA5FB8DAC00C1CCBE884A39377E097654900B8CE8E5874A5C103E8049E17A35BD34D454945ECBD9CF6A25F5EC8F6299FF0378535D3140EE4C0D72B46FCEC7604969CD6B089BABDE6CCC63816B252E48B69D20E5F9249B7CBE5D31CA10DD57C674710D1DF75B4A8461B66CB2EC50FF3500CA745E2070EE08E8DD920A7D3AEADE6D601624CF615B04D95715114F9447D742762535B5587B6213C98A42B866B6CAFD8E69CEF2D59E373A7EF242C6218962ACA26EE102C00310C9D5DB25D4E7E8CC3947D949A1E75DE415FB5C7D884051FC8B3FFDD95F4065BA582DB5A4905</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Key Encipherment, Data Encipherment</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2025-04-22T01:55:18</elem>
+<elem key="notAfter">2025-10-22T01:55:18</elem>
+</table>
+<elem key="md5">2a72bfa51ba8850ae9186a2b1229604d</elem>
+<elem key="sha1">0e2ec31c3b614f322d60fe7022fd996faecc9029</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC6jCCAdKgAwIBAgIQKJBA16QJ0pdEVgRQATO9LzANBgkqhkiG9w0BAQsFADAe&#xa;MRwwGgYDVQQDExNNQUlMLnRoZXJlc2VydmUubG9jMB4XDTI1MDQyMjAxNTUxOFoX&#xa;DTI1MTAyMjAxNTUxOFowHjEcMBoGA1UEAxMTTUFJTC50aGVyZXNlcnZlLmxvYzCC&#xa;ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAOQVMtAGiW0ymp0tEfme6XPy&#xa;oMrCwDlumzmCtJzycem3OVzH6l+42sAMHMvohKOTd+CXZUkAuM6OWHSlwQPoBJ4X&#xa;o1vTTUVJRey9nPaiX17I9imf8DeFNdMUDuTA1ytG/Ox2BJac1rCJur3mzMY4FrJS&#xa;5Itp0g5fkkm3y+XTHKEN1XxnRxDR33W0qEYbZssuxQ/zUAynReIHDuCOjdkgp9Ou&#xa;rebWAWJM9hWwTZVxURT5RH10J2JTW1WHtiE8mKQrhmtsr9jmnO8tWeNzp+8kLGIY&#xa;lirKJu4QLAAxDJ1dsl1OfozDlH2Umh513kFftcfYhAUfyLP/3ZX0BlulgttaSQUC&#xa;AwEAAaMkMCIwEwYDVR0lBAwwCgYIKwYBBQUHAwEwCwYDVR0PBAQDAgQwMA0GCSqG&#xa;SIb3DQEBCwUAA4IBAQBl1nQkeJzM8nLITs+Mb2gZjfQVHcQM/HDUoMFqeOe4OU29&#xa;rqBcZbaV8b3VEDT1mlfxWFpvY2bCtrPQJLVK1txehPWgFwu2czGjMo+S/Hw+GTLl&#xa;BtT5L7s3isf6U+jD8sLh0EOotXaJeDja/5M6/Amn4yF5mrYU2mBTXEVgBPnPB8px&#xa;p2bHF9Fy2jaVx9oGnyaKqsfmHSlI6Uj7qwMV18qhMIQ6NDzMOtOqdNY6ijJWfmEJ&#xa;Nv5ZxPiWk1+HdqaX29iG4lJy3u7qChfFGTMnE93MiEleZx2eh3/4FD7WtzzOgCWi&#xa;vb8vtcmS3CF44u1ME0yDdRlkhd+33Jw14VBdh6Mk&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+<port protocol="tcp" portid="5985"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script></port>
+<port protocol="tcp" portid="33060"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="mysqlx" product="MySQL X protocol listener" method="probed" conf="10"><cpe>cpe:/a:mysql:mysql</cpe></service></port>
+<port protocol="tcp" portid="47001"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script></port>
+<port protocol="tcp" portid="49664"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49665"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49666"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49667"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49668"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49669"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49670"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49681"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="31486"/>
+<osmatch name="Microsoft Windows Server 2016" accuracy="96" line="81776">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2016" accuracy="96"><cpe>cpe:/o:microsoft:windows_server_2016</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2019" accuracy="96" line="81909">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2019" accuracy="96"><cpe>cpe:/o:microsoft:windows_server_2019</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 10" accuracy="93" line="74412">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="10" accuracy="93"><cpe>cpe:/o:microsoft:windows_10</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 10 1709 - 21H2" accuracy="93" line="74990">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="10" accuracy="93"><cpe>cpe:/o:microsoft:windows_10</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 10 1903" accuracy="93" line="75102">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="10" accuracy="93"><cpe>cpe:/o:microsoft:windows_10</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 10 21H1" accuracy="93" line="75368">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="10" accuracy="93"><cpe>cpe:/o:microsoft:windows_10</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2012" accuracy="93" line="80969">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="93"><cpe>cpe:/o:microsoft:windows_server_2012</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2022" accuracy="93" line="82111">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2022" accuracy="93"><cpe>cpe:/o:microsoft:windows_server_2022</cpe></osclass>
+</osmatch>
+<osmatch name="Windows Server 2019" accuracy="92" line="82039">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2019" accuracy="92"><cpe>cpe:/o:microsoft:windows_server_2019</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Vista SP1" accuracy="92" line="85742">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="Vista" accuracy="92"><cpe>cpe:/o:microsoft:windows_vista::sp1</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="OS:SCAN(V=7.95%E=4%D=4/27%OT=22%CT=1%CU=31486%PV=Y%DS=2%DC=I%G=Y%TM=680E67A&#xa;OS:8%P=x86_64-pc-linux-gnu)SEQ(SP=104%GCD=1%ISR=106%TI=I%CI=I%TS=U)SEQ(SP=1&#xa;OS:04%GCD=1%ISR=10B%TI=I%CI=I%II=I%SS=S%TS=U)SEQ(SP=105%GCD=1%ISR=10B%TI=I%&#xa;OS:CI=I%II=I%SS=S%TS=U)SEQ(SP=FD%GCD=1%ISR=10C%TI=I%CI=I%II=I%SS=S%TS=U)OPS&#xa;OS:(O1=M507NW8NNS%O2=M507NW8NNS%O3=M507NW8%O4=M507NW8NNS%O5=M507NW8NNS%O6=M&#xa;OS:507NNS)WIN(W1=FFFF%W2=FFFF%W3=FFFF%W4=FFFF%W5=FFFF%W6=FF70)ECN(R=Y%DF=Y%&#xa;OS:T=80%W=FFFF%O=M507NW8NNS%CC=Y%Q=)T1(R=Y%DF=Y%T=80%S=O%A=S+%F=AS%RD=0%Q=)&#xa;OS:T2(R=Y%DF=Y%T=80%W=0%S=Z%A=S%F=AR%O=%RD=0%Q=)T3(R=Y%DF=Y%T=80%W=0%S=Z%A=&#xa;OS:O%F=AR%O=%RD=0%Q=)T4(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)T5(R=Y%DF=&#xa;OS:Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R%O=%&#xa;OS:RD=0%Q=)T7(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=80%I&#xa;OS:PL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=80%CD=Z)&#xa;"/>
+</os>
+<distance value="2"/>
+<tcpsequence index="260" difficulty="Good luck!" values="2C3AB3F9,7127C674,F5B4F2FB,34C53E1F,A8C0450,29AD1B13"/>
+<ipidsequence class="Incremental" values="F468,F469,F46A,F46B,F46C,F46D"/>
+<tcptssequence class="none returned (unsupported)"/>
+<hostscript><script id="smb2-time" output="&#xa;  date: 2025-04-27T17:21:23&#xa;  start_date: N/A"><elem key="date">2025-04-27T17:21:23</elem>
+<elem key="start_date">N/A</elem>
+</script><script id="smb2-security-mode" output="&#xa;  3:1:1: &#xa;    Message signing enabled but not required"><table key="3:1:1">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script></hostscript><times srtt="223931" rttvar="53844" to="439307"/>
+</host>
+<runstats><finished time="1745774504" timestr="Sun Apr 27 13:21:44 2025" summary="Nmap done at Sun Apr 27 13:21:44 2025; 1 IP address (1 host up) scanned in 182.62 seconds" elapsed="182.62" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
